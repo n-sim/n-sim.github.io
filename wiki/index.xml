@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wiki on Noah</title>
+    <link>https://n-sim.github.io/wiki/</link>
+    <description>Recent content in Wiki on Noah</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 31 Aug 2021 15:47:38 +0200</lastBuildDate>
+    
+	<atom:link href="https://n-sim.github.io/wiki/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Kombinatorik Übersicht</title>
+      <link>https://n-sim.github.io/wiki/htlstp/mathe/5klasse/kombinatorik_%C3%BCbersicht/</link>
+      <pubDate>Tue, 31 Aug 2021 22:42:04 +0200</pubDate>
+      
+      <guid>https://n-sim.github.io/wiki/htlstp/mathe/5klasse/kombinatorik_%C3%BCbersicht/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
