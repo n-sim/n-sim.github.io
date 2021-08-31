@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>My New Hugo Site</title>
-    <link>https://n-sim.github.io/web/</link>
+    <link>https://n-sim.github.io/</link>
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 31 Aug 2021 15:47:38 +0200</lastBuildDate>
     
-	<atom:link href="https://n-sim.github.io/web/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://n-sim.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About</title>
-      <link>https://n-sim.github.io/web/about/</link>
+      <link>https://n-sim.github.io/about/</link>
       <pubDate>Tue, 31 Aug 2021 15:47:38 +0200</pubDate>
       
-      <guid>https://n-sim.github.io/web/about/</guid>
+      <guid>https://n-sim.github.io/about/</guid>
       <description>Hier gibts was zu lesen bald lol</description>
     </item>
     
