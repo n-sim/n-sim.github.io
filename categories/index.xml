@@ -9,5 +9,23 @@
 	<atom:link href="https://n-sim.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>Meta</title>
+      <link>https://n-sim.github.io/categories/meta/</link>
+      <pubDate>Tue, 31 Aug 2021 21:51:52 +0200</pubDate>
+      
+      <guid>https://n-sim.github.io/categories/meta/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tutorial</title>
+      <link>https://n-sim.github.io/categories/tutorial/</link>
+      <pubDate>Fri, 24 Sep 2021 20:35:53 +0200</pubDate>
+      
+      <guid>https://n-sim.github.io/categories/tutorial/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

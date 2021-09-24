@@ -5,17 +5,27 @@
     <link>https://n-sim.github.io/</link>
     <description>Recent content on Noah</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 31 Aug 2021 22:42:04 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 24 Sep 2021 20:35:53 +0200</lastBuildDate>
     
 	<atom:link href="https://n-sim.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Using Stack Share to become a better developer</title>
+      <link>https://n-sim.github.io/blog/stack_share/</link>
+      <pubDate>Fri, 24 Sep 2021 20:35:53 +0200</pubDate>
+      
+      <guid>https://n-sim.github.io/blog/stack_share/</guid>
+      <description>Einleitung 1 Test 123 das ist ein Test du bist kein test lol
+Einleitung 2 Einleitung 3 Einleitung 4 Einleitung 5 Einleitung 6 normaler text</description>
+    </item>
+    
+    <item>
       <title>Kombinatorik Übersicht</title>
-      <link>https://n-sim.github.io/wiki/htlstp/mathe/5klasse/kombinatorik_%C3%BCbersicht/</link>
+      <link>https://n-sim.github.io/wiki/mathe/5klasse/kombinatorik_%C3%BCbersicht/</link>
       <pubDate>Tue, 31 Aug 2021 22:42:04 +0200</pubDate>
       
-      <guid>https://n-sim.github.io/wiki/htlstp/mathe/5klasse/kombinatorik_%C3%BCbersicht/</guid>
+      <guid>https://n-sim.github.io/wiki/mathe/5klasse/kombinatorik_%C3%BCbersicht/</guid>
       <description></description>
     </item>
     

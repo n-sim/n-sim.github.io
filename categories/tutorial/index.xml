@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blogs on Noah</title>
-    <link>https://n-sim.github.io/blog/</link>
-    <description>Recent content in Blogs on Noah</description>
+    <title>Tutorial on Noah</title>
+    <link>https://n-sim.github.io/categories/tutorial/</link>
+    <description>Recent content in Tutorial on Noah</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Fri, 24 Sep 2021 20:35:53 +0200</lastBuildDate>
     
-	<atom:link href="https://n-sim.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://n-sim.github.io/categories/tutorial/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,15 +18,6 @@
       <guid>https://n-sim.github.io/blog/stack_share/</guid>
       <description>Einleitung 1 Test 123 das ist ein Test du bist kein test lol
 Einleitung 2 Einleitung 3 Einleitung 4 Einleitung 5 Einleitung 6 normaler text</description>
-    </item>
-    
-    <item>
-      <title>About this website</title>
-      <link>https://n-sim.github.io/blog/about_this_website/</link>
-      <pubDate>Tue, 31 Aug 2021 21:51:52 +0200</pubDate>
-      
-      <guid>https://n-sim.github.io/blog/about_this_website/</guid>
-      <description>This website was built using Hugo, Markdown and Github Pages.</description>
     </item>
     
   </channel>
