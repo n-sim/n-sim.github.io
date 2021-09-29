@@ -5,10 +5,20 @@
     <link>https://n-sim.github.io/</link>
     <description>Recent content on Noah</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 31 Aug 2021 22:42:04 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 29 Sep 2021 16:04:56 +0200</lastBuildDate>
     
 	<atom:link href="https://n-sim.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Why stackshare.io is a game changer for developers</title>
+      <link>https://n-sim.github.io/blog/stack_share/</link>
+      <pubDate>Wed, 29 Sep 2021 16:04:56 +0200</pubDate>
+      
+      <guid>https://n-sim.github.io/blog/stack_share/</guid>
+      <description>Have you ever wanted to learn a new programming language, framework, or tool for a software project, but didn&amp;rsquo;t know what to choose?
+There is an overwhelming number of technologies out there, making it burdensome to find the best one for you to use and learn. Ascertaining the advantages and disadvantages often proves to be a difficult task. Additionally, you will have to ask yourself questions like: What tool integrations are available?</description>
+    </item>
     
     <item>
       <title>Kombinatorik Übersicht</title>
