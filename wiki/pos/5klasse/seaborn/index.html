@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="Allgemeines  hue: Gibt an, welches Featues zur Einfärbung genutzt werden soll (nur kategorische Daten sinnvoll) kind: Gibt speziellen Typ des Plots an  Histplot Normal
+sns.histplot(data=df, x=&amp;quot;Age&amp;quot;, hue=&amp;quot;Pclass&amp;quot;, multiple=&amp;quot;stack&amp;quot;)  Nach Feature-Ausprägung getrennt
+sns.displot(data=df, x=&amp;quot;Age&amp;quot;, col=&amp;quot;Pclass&amp;quot;)  Countplot sns.countplot(data=df, x=&amp;quot;Survived&amp;quot;)  sns.countplot(data=df, x=&amp;quot;Survived&amp;quot;, hue=&amp;quot;Sex&amp;quot;)  ^^ Survived aufgeteilt nach Geschlecht
+Scatterplot sns.scatterplot(data=df, x=&amp;quot;Age&amp;quot;, y=&amp;quot;Fare&amp;quot;, hue=&amp;quot;Survived&amp;quot;)  KDE-Plot sns.kdeplot(data=penguins, x=&amp;quot;flipper_length_mm&amp;quot;, hue=&amp;quot;species&amp;quot;, multiple=&amp;quot;layer&amp;quot; )  Lineplot Normal mit Seaborn
+sns.lineplot(data=austria, x=&#39;year&#39;, y=&#39;gdp&#39;)  Mehrere Spalten mit Pandas" />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://n-sim.github.io/wiki/pos/5klasse/seaborn/" />
+
+
+    <title>
+        
+            Seaborn :: Noah 
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.78ccb9a84882ff1da9852d7e8f4a5c129e4e46d6ba0ae171b72d53bf3221001c.css">
+
+
+
+
+
+
+
+<meta itemprop="name" content="Seaborn">
+<meta itemprop="description" content="Allgemeines  hue: Gibt an, welches Featues zur Einfärbung genutzt werden soll (nur kategorische Daten sinnvoll) kind: Gibt speziellen Typ des Plots an  Histplot Normal
+sns.histplot(data=df, x=&quot;Age&quot;, hue=&quot;Pclass&quot;, multiple=&quot;stack&quot;)  Nach Feature-Ausprägung getrennt
+sns.displot(data=df, x=&quot;Age&quot;, col=&quot;Pclass&quot;)  Countplot sns.countplot(data=df, x=&quot;Survived&quot;)  sns.countplot(data=df, x=&quot;Survived&quot;, hue=&quot;Sex&quot;)  ^^ Survived aufgeteilt nach Geschlecht
+Scatterplot sns.scatterplot(data=df, x=&quot;Age&quot;, y=&quot;Fare&quot;, hue=&quot;Survived&quot;)  KDE-Plot sns.kdeplot(data=penguins, x=&quot;flipper_length_mm&quot;, hue=&quot;species&quot;, multiple=&quot;layer&quot; )  Lineplot Normal mit Seaborn
+sns.lineplot(data=austria, x=&#39;year&#39;, y=&#39;gdp&#39;)  Mehrere Spalten mit Pandas">
+
+
+
+<meta itemprop="wordCount" content="100">
+
+
+
+<meta itemprop="keywords" content="" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Seaborn"/>
+<meta name="twitter:description" content="Allgemeines  hue: Gibt an, welches Featues zur Einfärbung genutzt werden soll (nur kategorische Daten sinnvoll) kind: Gibt speziellen Typ des Plots an  Histplot Normal
+sns.histplot(data=df, x=&quot;Age&quot;, hue=&quot;Pclass&quot;, multiple=&quot;stack&quot;)  Nach Feature-Ausprägung getrennt
+sns.displot(data=df, x=&quot;Age&quot;, col=&quot;Pclass&quot;)  Countplot sns.countplot(data=df, x=&quot;Survived&quot;)  sns.countplot(data=df, x=&quot;Survived&quot;, hue=&quot;Sex&quot;)  ^^ Survived aufgeteilt nach Geschlecht
+Scatterplot sns.scatterplot(data=df, x=&quot;Age&quot;, y=&quot;Fare&quot;, hue=&quot;Survived&quot;)  KDE-Plot sns.kdeplot(data=penguins, x=&quot;flipper_length_mm&quot;, hue=&quot;species&quot;, multiple=&quot;layer&quot; )  Lineplot Normal mit Seaborn
+sns.lineplot(data=austria, x=&#39;year&#39;, y=&#39;gdp&#39;)  Mehrere Spalten mit Pandas"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">home</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="/about/">About</a></li><li><a href="/blog/">Blog</a></li><li><a href="/wiki/">Wiki</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            <h2 class="post-title"><a href="https://n-sim.github.io/wiki/pos/5klasse/seaborn/">Seaborn</a></h2>
+            
+            
+            
+
+            <div class="post-content">
+                
+
+<h1 id="allgemeines">Allgemeines</h1>
+
+<ul>
+<li><code>hue</code>: Gibt an, welches Featues zur Einfärbung genutzt werden soll (nur kategorische Daten sinnvoll)</li>
+<li><code>kind</code>: Gibt speziellen Typ des Plots an</li>
+</ul>
+
+<h1 id="histplot">Histplot</h1>
+
+<p><strong>Normal</strong></p>
+
+<pre><code class="language-python">sns.histplot(data=df, x=&quot;Age&quot;, hue=&quot;Pclass&quot;, multiple=&quot;stack&quot;)
+</code></pre>
+
+<p><strong>Nach Feature-Ausprägung getrennt</strong></p>
+
+<pre><code class="language-python">sns.displot(data=df, x=&quot;Age&quot;, col=&quot;Pclass&quot;)
+</code></pre>
+
+<h1 id="countplot">Countplot</h1>
+
+<pre><code class="language-python">sns.countplot(data=df, x=&quot;Survived&quot;)
+</code></pre>
+
+<pre><code class="language-python">sns.countplot(data=df, x=&quot;Survived&quot;, hue=&quot;Sex&quot;)
+</code></pre>
+
+<p>^^ Survived aufgeteilt nach Geschlecht</p>
+
+<h1 id="scatterplot">Scatterplot</h1>
+
+<pre><code class="language-python">sns.scatterplot(data=df, x=&quot;Age&quot;, y=&quot;Fare&quot;, hue=&quot;Survived&quot;)
+</code></pre>
+
+<h1 id="kde-plot">KDE-Plot</h1>
+
+<pre><code class="language-python">sns.kdeplot(data=penguins, x=&quot;flipper_length_mm&quot;, hue=&quot;species&quot;, multiple=&quot;layer&quot; )
+</code></pre>
+
+<h1 id="lineplot">Lineplot</h1>
+
+<p><strong>Normal mit Seaborn</strong></p>
+
+<pre><code class="language-python">sns.lineplot(data=austria, x='year', y='gdp')
+</code></pre>
+
+<p><strong>Mehrere Spalten mit Pandas</strong></p>
+
+<pre><code class="language-pandas">austria.plot(x=&quot;year&quot;, y=[&quot;population&quot;, &quot;gdp&quot;])
+</code></pre>
+
+<h1 id="jointplot">Jointplot</h1>
+
+<pre><code class="language-python">sns.jointplot(data=df, x=&quot;Age&quot;, y=&quot;Fare&quot;)
+</code></pre>
+
+<h1 id="relplot">Relplot</h1>
+
+<pre><code class="language-python">sns.relplot(data=df, x=&quot;Age&quot;, y=&quot;Fare&quot;, kind=&quot;scatter&quot;)
+</code></pre>
+
+<pre><code class="language-python">sns.relplot(data=df, x=&quot;Age&quot;, y=&quot;Fare&quot;, kind=&quot;line&quot;)
+</code></pre>
+
+<h1 id="catplot">Catplot</h1>
+
+<pre><code class="language-python">sns.catplot(data=df, kind=&quot;box&quot;, x=&quot;Pclass&quot;, y=&quot;Age&quot;)
+</code></pre>
+
+<pre><code class="language-python">sns.catplot(data=df, kind=&quot;violin&quot;, x=&quot;Pclass&quot;, y=&quot;Age&quot;)
+</code></pre>
+
+<h1 id="lm-plot">LM-Plot</h1>
+
+<pre><code class="language-python">sns.lmplot(data=df, x=&quot;Age&quot;, y=&quot;Fare&quot;, hue=&quot;Sex&quot;)
+</code></pre>
+
+<h1 id="heatmap">Heatmap</h1>
+
+<pre><code class="language-python">sns.heatmap(data=df.corr(), cmap=&quot;coolwarm&quot;)
+</code></pre>
+
+            </div>
+        </article>
+
+        
+
+        <div class="post-info">
+            
+            
+			
+    <p>
+        <span>Fach: POS</span>
+    </p>
+
+  		</div>
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="/bundle.min.4bd4ccd2ab9fe5338bb5c7d92a81317fa54c948bb5605e9807c4e9b6f7ad4186c70f7634b323e7b854c4a2c4af7d9ebd1fc5a6f42b37d2721a735d8b1d7cbf01.js" integrity="sha512-S9TM0quf5TOLtcfZKoExf6VMlIu1YF6YB8TptvetQYbHD3Y0syPnuFTEosSvfZ69H8Wm9Cs30nIac12LHXy/AQ=="></script>
+
+
+
+    </body>
+</html>

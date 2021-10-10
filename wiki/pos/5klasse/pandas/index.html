@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="Input/Output Voreinstellungen
+pd.set_option(&#39;display.max_columns&#39;, 100) pd.set_option(&#39;display.max_rows&#39;, 50)  Manuell erstellen
+df = pd.DataFrame(data={&amp;quot;age&amp;quot;: [18, 23, 24], &amp;quot;grade&amp;quot;: [1, 2, 2]}, index=[&amp;quot;Noah&amp;quot;, &amp;quot;Wolfgang&amp;quot;, &amp;quot;Sebi&amp;quot;])  CSV einlesen
+df = pd.read_csv(&amp;quot;data/countries-of-the-world.csv&amp;quot;, decimal=&amp;quot;,&amp;quot;, sep=&amp;quot;,&amp;quot;)  Excel einlesen
+df = pd.read_excel(&amp;quot;data/test.xlsx&amp;quot;)  Als CSV ausgeben
+df.to_csv(&#39;data/titanic-cleaned.csv&#39;, index=False)  Informationen einholen df.head()  df.info(verbose=True)  df.describe()  Selektion Basic Ganze Spalte
+df[&amp;quot;Spaltenname&amp;quot;]  df.Spaltenname  Slicing Benannte Spalten
+df.loc[:, [&amp;quot;Spalte1&amp;quot;, &amp;quot;Spalte2&amp;quot;]]  Slicing (Label)
+df.loc[:3, ::2]  ^^ Selektiert von den ersten 3 Zeilen (Ende inklusive), jeweils jede Zweite Spalte" />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://n-sim.github.io/wiki/pos/5klasse/pandas/" />
+
+
+    <title>
+        
+            Pandas :: Noah 
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.78ccb9a84882ff1da9852d7e8f4a5c129e4e46d6ba0ae171b72d53bf3221001c.css">
+
+
+
+
+
+
+
+<meta itemprop="name" content="Pandas">
+<meta itemprop="description" content="Input/Output Voreinstellungen
+pd.set_option(&#39;display.max_columns&#39;, 100) pd.set_option(&#39;display.max_rows&#39;, 50)  Manuell erstellen
+df = pd.DataFrame(data={&quot;age&quot;: [18, 23, 24], &quot;grade&quot;: [1, 2, 2]}, index=[&quot;Noah&quot;, &quot;Wolfgang&quot;, &quot;Sebi&quot;])  CSV einlesen
+df = pd.read_csv(&quot;data/countries-of-the-world.csv&quot;, decimal=&quot;,&quot;, sep=&quot;,&quot;)  Excel einlesen
+df = pd.read_excel(&quot;data/test.xlsx&quot;)  Als CSV ausgeben
+df.to_csv(&#39;data/titanic-cleaned.csv&#39;, index=False)  Informationen einholen df.head()  df.info(verbose=True)  df.describe()  Selektion Basic Ganze Spalte
+df[&quot;Spaltenname&quot;]  df.Spaltenname  Slicing Benannte Spalten
+df.loc[:, [&quot;Spalte1&quot;, &quot;Spalte2&quot;]]  Slicing (Label)
+df.loc[:3, ::2]  ^^ Selektiert von den ersten 3 Zeilen (Ende inklusive), jeweils jede Zweite Spalte">
+
+
+
+<meta itemprop="wordCount" content="376">
+
+
+
+<meta itemprop="keywords" content="" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Pandas"/>
+<meta name="twitter:description" content="Input/Output Voreinstellungen
+pd.set_option(&#39;display.max_columns&#39;, 100) pd.set_option(&#39;display.max_rows&#39;, 50)  Manuell erstellen
+df = pd.DataFrame(data={&quot;age&quot;: [18, 23, 24], &quot;grade&quot;: [1, 2, 2]}, index=[&quot;Noah&quot;, &quot;Wolfgang&quot;, &quot;Sebi&quot;])  CSV einlesen
+df = pd.read_csv(&quot;data/countries-of-the-world.csv&quot;, decimal=&quot;,&quot;, sep=&quot;,&quot;)  Excel einlesen
+df = pd.read_excel(&quot;data/test.xlsx&quot;)  Als CSV ausgeben
+df.to_csv(&#39;data/titanic-cleaned.csv&#39;, index=False)  Informationen einholen df.head()  df.info(verbose=True)  df.describe()  Selektion Basic Ganze Spalte
+df[&quot;Spaltenname&quot;]  df.Spaltenname  Slicing Benannte Spalten
+df.loc[:, [&quot;Spalte1&quot;, &quot;Spalte2&quot;]]  Slicing (Label)
+df.loc[:3, ::2]  ^^ Selektiert von den ersten 3 Zeilen (Ende inklusive), jeweils jede Zweite Spalte"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">home</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="/about/">About</a></li><li><a href="/blog/">Blog</a></li><li><a href="/wiki/">Wiki</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            <h2 class="post-title"><a href="https://n-sim.github.io/wiki/pos/5klasse/pandas/">Pandas</a></h2>
+            
+            
+            
+
+            <div class="post-content">
+                
+
+<h1 id="input-output">Input/Output</h1>
+
+<p><strong>Voreinstellungen</strong></p>
+
+<pre><code class="language-python">pd.set_option('display.max_columns', 100)
+pd.set_option('display.max_rows', 50)
+</code></pre>
+
+<p><strong>Manuell erstellen</strong></p>
+
+<pre><code class="language-python">df = pd.DataFrame(data={&quot;age&quot;: [18, 23, 24], &quot;grade&quot;: [1, 2, 2]}, index=[&quot;Noah&quot;, &quot;Wolfgang&quot;, &quot;Sebi&quot;])
+</code></pre>
+
+<p><strong>CSV einlesen</strong></p>
+
+<pre><code class="language-python">df = pd.read_csv(&quot;data/countries-of-the-world.csv&quot;, decimal=&quot;,&quot;, sep=&quot;,&quot;)
+</code></pre>
+
+<p><strong>Excel einlesen</strong></p>
+
+<pre><code class="language-python">df = pd.read_excel(&quot;data/test.xlsx&quot;)
+</code></pre>
+
+<p><strong>Als CSV ausgeben</strong></p>
+
+<pre><code class="language-python">df.to_csv('data/titanic-cleaned.csv', index=False)
+</code></pre>
+
+<h1 id="informationen-einholen">Informationen einholen</h1>
+
+<pre><code class="language-python">df.head()
+</code></pre>
+
+<pre><code class="language-python">df.info(verbose=True)
+</code></pre>
+
+<pre><code class="language-python">df.describe()
+</code></pre>
+
+<h1 id="selektion">Selektion</h1>
+
+<h2 id="basic">Basic</h2>
+
+<p><strong>Ganze Spalte</strong></p>
+
+<pre><code class="language-python">df[&quot;Spaltenname&quot;]
+</code></pre>
+
+<pre><code class="language-python">df.Spaltenname
+</code></pre>
+
+<h2 id="slicing">Slicing</h2>
+
+<p><strong>Benannte Spalten</strong></p>
+
+<pre><code class="language-python">df.loc[:, [&quot;Spalte1&quot;, &quot;Spalte2&quot;]]
+</code></pre>
+
+<p><strong>Slicing (Label)</strong></p>
+
+<pre><code class="language-python">df.loc[:3, ::2]
+</code></pre>
+
+<p>^^ Selektiert von den ersten <strong>3</strong> Zeilen (Ende <strong>inklusive</strong>), jeweils jede Zweite Spalte</p>
+
+<p><strong>Slicing (Index)</strong></p>
+
+<pre><code class="language-python">df.iloc[:3, -2:]
+</code></pre>
+
+<p>^^ Selektiert von den ersten <strong>2</strong> Zeilen (Ende <strong>exklusive</strong>), jeweils die letzen beiden Spalten</p>
+
+<h2 id="filtern">Filtern</h2>
+
+<p><strong>Zeilen mit bestimmtem Spaltenwert</strong></p>
+
+<pre><code class="language-python">result = df[df['Spaltenname'] == 'Wert']
+</code></pre>
+
+<p><strong>Zeilen mit Spaltenwert kleiner xy</strong></p>
+
+<pre><code class="language-python">df[df[&quot;Population&quot;] &lt; 10_000]
+</code></pre>
+
+<p><strong>Zeilen mit mehreren Bedinungen erfüllt</strong></p>
+
+<pre><code class="language-python">df[(df[&quot;housing_median_age&quot;] &gt; 50) &amp; (df[&quot;population&quot;] &gt; 1000)]
+</code></pre>
+
+<p>^^ Klammern nicht vergessen</p>
+
+<p><strong>Zeilen mit Spaltenwert in Liste</strong></p>
+
+<pre><code class="language-python">df[df[&quot;ocean_proximity&quot;].isin(['NEAR BAY', '&lt;1H OCEAN'])]
+</code></pre>
+
+<p><strong>Zeilen mit Spaltenwert <em>nicht</em> in Liste</strong></p>
+
+<pre><code class="language-python">df[~df[&quot;ocean_proximity&quot;].isin(['NEAR BAY', '&lt;1H OCEAN'])]
+</code></pre>
+
+<p>^^ Tilde <strong>~</strong> negiert Filter</p>
+
+<p><strong>Zeilen mit Spaltenwert <em>NaN</em></strong></p>
+
+<pre><code class="language-python">df[df[&quot;Embarked&quot;].isna()]
+</code></pre>
+
+<p><strong>Zeilen mit String beinhaltet</strong></p>
+
+<pre><code class="language-python">df[df[&quot;Name&quot;].str.contains(&quot;Harris&quot;)]
+</code></pre>
+
+<p><strong>Zeile mit String ignorecase beinhaltet</strong></p>
+
+<pre><code class="language-python">df[df[&quot;JobTitle&quot;].str.lower().str.contains(&quot;chief&quot;)]
+</code></pre>
+
+<p><strong>Zeilen mit Spaltenwert kommt genau 1 mal vor</strong></p>
+
+<pre><code class="language-python">sal[sal[&quot;Year&quot;] == 2013]['JobTitle'].value_counts().where(lambda x : x==1).count()
+</code></pre>
+
+<h1 id="aggregieren">Aggregieren</h1>
+
+<p><strong>Durchschnittswert einer Spalte</strong></p>
+
+<pre><code class="language-python">df[&quot;Age&quot;].mean()
+</code></pre>
+
+<p><strong>Einzigartige Werte einer Spalte</strong></p>
+
+<pre><code class="language-python">df[&quot;Pclass&quot;].unique()
+</code></pre>
+
+<p><strong>Anzahl der einzigartigen Werte einer Spalte</strong></p>
+
+<pre><code class="language-python">df[&quot;Pclass&quot;].value_counts()
+</code></pre>
+
+<p><strong>Anzahl der null Werte einer Spalte</strong></p>
+
+<pre><code class="language-python">df[&quot;Age&quot;].isna().count()
+</code></pre>
+
+<p><strong>Verteilung der Features einer Klasse</strong></p>
+
+<pre><code class="language-python">df.groupby(&quot;Pclass&quot;)[&quot;Survived&quot;].count()
+</code></pre>
+
+<h1 id="sortieren">Sortieren</h1>
+
+<p><strong>Dataframe nach Spalte sortieren</strong></p>
+
+<pre><code class="language-python">df.sort_values(by=&quot;Fare&quot;, ascending=True)
+</code></pre>
+
+<p>^^ absteigend wäre <code>ascending=False</code></p>
+
+<p><strong>Dataframe nach mehreren Spalten sortieren</strong></p>
+
+<pre><code class="language-python">df.sort_values(by=[&quot;Pclass&quot;, &quot;Age&quot;], ascending=[True, False])
+</code></pre>
+
+<p>^^ sortiert nach <code>Pclass</code> aufsteigend und <code>Age</code> absteigend</p>
+
+<p><strong>Spalte sortieren</strong></p>
+
+<pre><code class="language-python">df[&quot;Fare&quot;].sort_values(ascending=False)
+</code></pre>
+
+<p>^^ kein <code>by=</code></p>
+
+<p><strong>n größten Werte einer Spalte</strong></p>
+
+<pre><code class="language-python">df[&quot;Age&quot;].nlargest(5)
+</code></pre>
+
+<p><strong>n kleinsten Werte einer Spalte</strong></p>
+
+<pre><code class="language-python">df[&quot;Age&quot;].nsmallest(5)
+</code></pre>
+
+<h1 id="cleaning">Cleaning</h1>
+
+<p><strong>Spalte löschen</strong></p>
+
+<pre><code class="language-python">df.drop(&quot;Cabin&quot;, axis=1, inplace=True)
+</code></pre>
+
+<p><strong>Zeilen mit best. Anzahl NaN-Werten droppen</strong></p>
+
+<pre><code class="language-python">df.dropna(axis=0, inplace=True, tresh=3)
+</code></pre>
+
+<p>^^ Droppen, wenn nicht mindestens 3 Nicht-NaN Werte vorhanden sind</p>
+
+<p><strong>Zeilen mit Nan-Wert in best. Spalte droppen</strong></p>
+
+<pre><code class="language-python">df = df[df['total_bedrooms'].notna()]
+</code></pre>
+
+<p><strong>NaN-Werte mit Mittelwert auf best. Gruppe auffüllen</strong></p>
+
+<pre><code class="language-python">df[&quot;Age&quot;] = df.groupby(&quot;Pclass&quot;)[&quot;Age&quot;].apply(lambda x: x.fillna(x.mean()))
+</code></pre>
+
+<p>^^ Median wäre <code>.median()</code></p>
+
+<p><strong>One Hot Encoding</strong></p>
+
+<pre><code class="language-python">ocean_proximity = pd.get_dummies(housing['ocean_proximity'], drop_first=True)
+housing = pd.concat([housing, ocean_proximity], axis=1)
+housing.drop('ocean_proximity', axis=1, inplace=True)
+</code></pre>
+
+<h1 id="altering">Altering</h1>
+
+<p><strong>Zeilen anfügen</strong></p>
+
+<pre><code class="language-python">df = pd.concat([df, series], axis=0)
+</code></pre>
+
+<p><strong>Zeile anfügen</strong></p>
+
+<pre><code class="language-python">series = pd.Series([&quot;Noah&quot;, &quot;male&quot;, 18], index=[&quot;Name&quot;, &quot;Sex&quot;, &quot;Age&quot;] ,name=&quot;Name&quot;)
+df.append(series)
+</code></pre>
+
+<p><strong>Spalte anfügen</strong></p>
+
+<pre><code class="language-python">df[&quot;agetimes2&quot;] = df[&quot;Age&quot;].apply(lambda x: x*2)
+</code></pre>
+
+<p><strong>Spalte anfügen (alternativ)</strong></p>
+
+<pre><code class="language-python">df = pd.concat([df, series], axis=1)
+</code></pre>
+
+<h1 id="metriken">Metriken</h1>
+
+<p><strong>Alle Korrelationskoeffizienten</strong></p>
+
+<pre><code class="language-python">df.corr()
+</code></pre>
+
+<p><strong>Features die mit <em>target</em>-Feature korrelieren</strong></p>
+
+<pre><code class="language-python">df.corr()[&quot;Survived&quot;]
+</code></pre>
+
+<p><strong>Features die GRÖSSTEN Einfluss haben</strong></p>
+
+<pre><code class="language-python">df.corr()[&quot;Survived&quot;].drop(&quot;Survived&quot;).abs().nlargest(3)
+</code></pre>
+
+<p>^^ wichtig ist das <code>abs()</code></p>
+
+            </div>
+        </article>
+
+        
+
+        <div class="post-info">
+            
+            
+			
+    <p>
+        <span>Fach: POS</span>
+    </p>
+
+  		</div>
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="/bundle.min.4bd4ccd2ab9fe5338bb5c7d92a81317fa54c948bb5605e9807c4e9b6f7ad4186c70f7634b323e7b854c4a2c4af7d9ebd1fc5a6f42b37d2721a735d8b1d7cbf01.js" integrity="sha512-S9TM0quf5TOLtcfZKoExf6VMlIu1YF6YB8TptvetQYbHD3Y0syPnuFTEosSvfZ69H8Wm9Cs30nIac12LHXy/AQ=="></script>
+
+
+
+    </body>
+</html>

@@ -51,5 +51,49 @@ Project Management &amp;ldquo;pm-basic&amp;rdquo;
 Learn more</description>
     </item>
     
+    <item>
+      <title>Numpy</title>
+      <link>https://n-sim.github.io/wiki/pos/5klasse/numpy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://n-sim.github.io/wiki/pos/5klasse/numpy/</guid>
+      <description> Arrays Erzeugen array
+array = np.array([42, 3.1415])  arange
+array = np.arange(0, 24, 2)  Zahlen von 0 bis exkl. 24 in 2er-Schritten
+linspace
+np.linspace(1, 5, 10)  10 gleichmäßig verteilte Zahlen von 1 bis inkl. 5
+Löschen np.delete(a, 1, 0)  </description>
+    </item>
+    
+    <item>
+      <title>Pandas</title>
+      <link>https://n-sim.github.io/wiki/pos/5klasse/pandas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://n-sim.github.io/wiki/pos/5klasse/pandas/</guid>
+      <description>Input/Output Voreinstellungen
+pd.set_option(&#39;display.max_columns&#39;, 100) pd.set_option(&#39;display.max_rows&#39;, 50)  Manuell erstellen
+df = pd.DataFrame(data={&amp;quot;age&amp;quot;: [18, 23, 24], &amp;quot;grade&amp;quot;: [1, 2, 2]}, index=[&amp;quot;Noah&amp;quot;, &amp;quot;Wolfgang&amp;quot;, &amp;quot;Sebi&amp;quot;])  CSV einlesen
+df = pd.read_csv(&amp;quot;data/countries-of-the-world.csv&amp;quot;, decimal=&amp;quot;,&amp;quot;, sep=&amp;quot;,&amp;quot;)  Excel einlesen
+df = pd.read_excel(&amp;quot;data/test.xlsx&amp;quot;)  Als CSV ausgeben
+df.to_csv(&#39;data/titanic-cleaned.csv&#39;, index=False)  Informationen einholen df.head()  df.info(verbose=True)  df.describe()  Selektion Basic Ganze Spalte
+df[&amp;quot;Spaltenname&amp;quot;]  df.Spaltenname  Slicing Benannte Spalten
+df.loc[:, [&amp;quot;Spalte1&amp;quot;, &amp;quot;Spalte2&amp;quot;]]  Slicing (Label)
+df.loc[:3, ::2]  ^^ Selektiert von den ersten 3 Zeilen (Ende inklusive), jeweils jede Zweite Spalte</description>
+    </item>
+    
+    <item>
+      <title>Seaborn</title>
+      <link>https://n-sim.github.io/wiki/pos/5klasse/seaborn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://n-sim.github.io/wiki/pos/5klasse/seaborn/</guid>
+      <description>Allgemeines  hue: Gibt an, welches Featues zur Einfärbung genutzt werden soll (nur kategorische Daten sinnvoll) kind: Gibt speziellen Typ des Plots an  Histplot Normal
+sns.histplot(data=df, x=&amp;quot;Age&amp;quot;, hue=&amp;quot;Pclass&amp;quot;, multiple=&amp;quot;stack&amp;quot;)  Nach Feature-Ausprägung getrennt
+sns.displot(data=df, x=&amp;quot;Age&amp;quot;, col=&amp;quot;Pclass&amp;quot;)  Countplot sns.countplot(data=df, x=&amp;quot;Survived&amp;quot;)  sns.countplot(data=df, x=&amp;quot;Survived&amp;quot;, hue=&amp;quot;Sex&amp;quot;)  ^^ Survived aufgeteilt nach Geschlecht
+Scatterplot sns.scatterplot(data=df, x=&amp;quot;Age&amp;quot;, y=&amp;quot;Fare&amp;quot;, hue=&amp;quot;Survived&amp;quot;)  KDE-Plot sns.kdeplot(data=penguins, x=&amp;quot;flipper_length_mm&amp;quot;, hue=&amp;quot;species&amp;quot;, multiple=&amp;quot;layer&amp;quot; )  Lineplot Normal mit Seaborn
+sns.lineplot(data=austria, x=&#39;year&#39;, y=&#39;gdp&#39;)  Mehrere Spalten mit Pandas</description>
+    </item>
+    
   </channel>
 </rss>
