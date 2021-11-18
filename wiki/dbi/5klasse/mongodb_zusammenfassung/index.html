@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="Big Data Große Data-Sätze mit denen gewöhnliche Software-Tools nicht umgehen können
+Begriffe Volume (Umfang)
+Menge der erzeugten und gespeicherten Daten
+Variety (Vielfalt)
+Heterogene Daten von strukturiert bis unstrukturierten
+Velocity (Geschwindigkeit)
+Daten wachsen ständig und müssen kontinuierlich analysiert/überwacht werden
+Veracity (Wahrhaftigkeit)
+Qualität und Zuverlässigkeit der Daten
+Value (Wert)
+Wert/Nutzen den Unternehmen aus Daten gewinnen
+Variability (Veränderlichkeit)
+Daten sind weniger konsistent als herkömmliche Transaktionsdaten
+Ziele  Kosteneffiziente / Elastische Skalierung Neue Einblicke (BI) Lösung: NoSQL  NoSQL Datenbanken Not only SQL" />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://n-sim.github.io/wiki/dbi/5klasse/mongodb_zusammenfassung/" />
+
+
+    <title>
+        
+            MongoDB Zusammenfassung :: Noah 
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.78ccb9a84882ff1da9852d7e8f4a5c129e4e46d6ba0ae171b72d53bf3221001c.css">
+
+
+
+
+
+
+
+<meta itemprop="name" content="MongoDB Zusammenfassung">
+<meta itemprop="description" content="Big Data Große Data-Sätze mit denen gewöhnliche Software-Tools nicht umgehen können
+Begriffe Volume (Umfang)
+Menge der erzeugten und gespeicherten Daten
+Variety (Vielfalt)
+Heterogene Daten von strukturiert bis unstrukturierten
+Velocity (Geschwindigkeit)
+Daten wachsen ständig und müssen kontinuierlich analysiert/überwacht werden
+Veracity (Wahrhaftigkeit)
+Qualität und Zuverlässigkeit der Daten
+Value (Wert)
+Wert/Nutzen den Unternehmen aus Daten gewinnen
+Variability (Veränderlichkeit)
+Daten sind weniger konsistent als herkömmliche Transaktionsdaten
+Ziele  Kosteneffiziente / Elastische Skalierung Neue Einblicke (BI) Lösung: NoSQL  NoSQL Datenbanken Not only SQL">
+
+
+
+<meta itemprop="wordCount" content="2007">
+
+
+
+<meta itemprop="keywords" content="" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="MongoDB Zusammenfassung"/>
+<meta name="twitter:description" content="Big Data Große Data-Sätze mit denen gewöhnliche Software-Tools nicht umgehen können
+Begriffe Volume (Umfang)
+Menge der erzeugten und gespeicherten Daten
+Variety (Vielfalt)
+Heterogene Daten von strukturiert bis unstrukturierten
+Velocity (Geschwindigkeit)
+Daten wachsen ständig und müssen kontinuierlich analysiert/überwacht werden
+Veracity (Wahrhaftigkeit)
+Qualität und Zuverlässigkeit der Daten
+Value (Wert)
+Wert/Nutzen den Unternehmen aus Daten gewinnen
+Variability (Veränderlichkeit)
+Daten sind weniger konsistent als herkömmliche Transaktionsdaten
+Ziele  Kosteneffiziente / Elastische Skalierung Neue Einblicke (BI) Lösung: NoSQL  NoSQL Datenbanken Not only SQL"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">home</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="/about/">About</a></li><li><a href="/blog/">Blog</a></li><li><a href="/wiki/">Wiki</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            <h2 class="post-title"><a href="https://n-sim.github.io/wiki/dbi/5klasse/mongodb_zusammenfassung/">MongoDB Zusammenfassung</a></h2>
+            
+            
+            
+
+            <div class="post-content">
+                
+
+<h1 id="big-data">Big Data</h1>
+
+<p>Große Data-Sätze mit denen gewöhnliche Software-Tools nicht umgehen können</p>
+
+<h2 id="begriffe">Begriffe</h2>
+
+<p><strong>Volume (Umfang)</strong></p>
+
+<p>Menge der erzeugten und gespeicherten Daten</p>
+
+<p><strong>Variety (Vielfalt)</strong></p>
+
+<p>Heterogene Daten von strukturiert bis unstrukturierten</p>
+
+<p><strong>Velocity (Geschwindigkeit)</strong></p>
+
+<p>Daten wachsen ständig und müssen kontinuierlich analysiert/überwacht werden</p>
+
+<p><strong>Veracity (Wahrhaftigkeit)</strong></p>
+
+<p>Qualität und Zuverlässigkeit der Daten</p>
+
+<p><strong><em>Value (Wert)</em></strong></p>
+
+<p>Wert/Nutzen den Unternehmen aus Daten gewinnen</p>
+
+<p><strong><em>Variability (Veränderlichkeit)</em></strong></p>
+
+<p>Daten sind weniger konsistent als herkömmliche Transaktionsdaten</p>
+
+<h2 id="ziele">Ziele</h2>
+
+<ul>
+<li>Kosteneffiziente / Elastische Skalierung</li>
+<li>Neue Einblicke (BI)</li>
+<li>Lösung: NoSQL</li>
+</ul>
+
+<h1 id="nosql-datenbanken">NoSQL Datenbanken</h1>
+
+<p><strong>N</strong>ot <strong>o</strong>nly <strong>SQL</strong></p>
+
+<h2 id="arten">Arten</h2>
+
+<h3 id="key-value-db">Key Value DB</h3>
+
+<ul>
+<li>Schlüssel mit zugehörigen Wert</li>
+<li>Daten/Schlüsel können verschieden strukturiert sein</li>
+<li>3 Grundoperationen:
+
+<ul>
+<li><code>PUT(key,value)</code></li>
+<li><code>value=GET(key)</code></li>
+<li><code>DELETE(key)</code></li>
+</ul></li>
+</ul>
+
+<h3 id="column-db">Column DB</h3>
+
+<ul>
+<li>Physischer Speicher wird spaltenweise organisiert (nicht Zeile um Zeile)</li>
+<li>Wichtig wenn mehr Interesse an Eigenschaften von Entitäten (OLAP)</li>
+</ul>
+
+<h3 id="graphen-db">Graphen DB</h3>
+
+<ul>
+<li>Besteht aus Knoten (Entitäten) und Kanten (Beziehungen)
+
+<ul>
+<li>Knoten und Kanten können weitere Eigenschaften haben</li>
+</ul></li>
+<li>Wichtig wenn mehr Interesse an Beziehungen zwischen Entitäten</li>
+</ul>
+
+<h3 id="document-db"><em>Document DB</em></h3>
+
+<ul>
+<li>Daten in Dokumenten</li>
+<li>Dokumente in Collections</li>
+<li>Schemaless (keine feste Stuktur)</li>
+<li>Weitere Features z.B. Tags, Collections, Hierachien</li>
+</ul>
+
+<h2 id="verteilte-datenbanken">Verteilte Datenbanken</h2>
+
+<ul>
+<li>Daten werden auf mehrere Knoten repliziert (mehrere Standorte)</li>
+<li>Wichtig bei vielen Daten und hohen Anforderungen an Zugriffszeit</li>
+</ul>
+
+<h3 id="cap-theorem">CAP Theorem</h3>
+
+<p>Man muss sich für 2 der folgenden Anforderungen entscheiden:</p>
+
+<p><strong>Consistency</strong></p>
+
+<p>Jeder Read erhält den gleichen Datenzustand.</p>
+
+<p><strong>Availability</strong></p>
+
+<p>Jede Anfrage erhält eine Antwort in akzeptabler Zeit</p>
+
+<p><strong>Partition Tolerance</strong></p>
+
+<p>Auch bei Netzwerkausfall (Partitionsausfall) muss das System weiter funktionieren.</p>
+
+<ul>
+<li>SQL: C+A</li>
+<li>NoSQL: P+A</li>
+</ul>
+
+<h3 id="acid-vs-base">ACID vs BASE</h3>
+
+<p>Designprinzip, welches absolute Konsistenz aufgibt, statt dessen die Verfügbarkeit des Systems erhöht, und dadurch zwischenzeitlich in einem etwas undefinierten Zustand sein kann</p>
+
+<table>
+<thead>
+<tr>
+<th>Acid</th>
+<th>Base</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Atomicity</td>
+<td>Basically Available</td>
+</tr>
+
+<tr>
+<td>Consistency</td>
+<td>Soft state</td>
+</tr>
+
+<tr>
+<td>Isolation</td>
+<td>Eventual consistency</td>
+</tr>
+
+<tr>
+<td>Durability</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h1 id="mongodb-allgemein">MongoDB Allgemein</h1>
+
+<h2 id="versionen">Versionen</h2>
+
+<ul>
+<li>On Premise
+
+<ul>
+<li>MongoDB Community Server</li>
+<li>MongoDB Enterprise Server</li>
+</ul></li>
+<li>Cloud
+
+<ul>
+<li>MongoDB Atlas</li>
+</ul></li>
+</ul>
+
+<h2 id="komponenten">Komponenten</h2>
+
+<ul>
+<li>MongoDB Server (Datenbank-server)</li>
+<li>MongoDB Shell (Javascript CLI)</li>
+<li>MongoDB Compass (Admin/Management GUI)</li>
+</ul>
+
+<h2 id="atlas">Atlas</h2>
+
+<ul>
+<li>Database + Tools as a Service (in der Cloud)</li>
+<li>Von MongoDB verwaltet</li>
+</ul>
+
+<p><strong>Cluster</strong></p>
+
+<p>Gruppe von Servern</p>
+
+<p><strong>Replica Set</strong></p>
+
+<p>Mehrere verbundene Instanzen, die dieselben Daten gespeichert haben (Redundanz)</p>
+
+<h1 id="datenformate">Datenformate</h1>
+
+<h2 id="json">JSON</h2>
+
+<p><strong>J</strong>ava<strong>S</strong>cript <strong>O</strong>bject <strong>N</strong>otation</p>
+
+<p>Leichtgewichtiges Text-Format um Daten zu speichern und zu transportieren</p>
+
+<h3 id="vorkommen">Vorkommen</h3>
+
+<ul>
+<li>Dateityp (.json)</li>
+<li>MIME-Typ: &ldquo;application/json&rdquo;</li>
+</ul>
+
+<h3 id="syntax">Syntax</h3>
+
+<ul>
+<li>Schlüssel-Werte-Paare mit Doppelpunkt getrennt</li>
+<li>Schlüssel sind Strings (in Doppelhochkommas)</li>
+<li>Daten-Elemente sind mit Kommas getrennt</li>
+<li>Wellen-Klammern für (Sub)-Objekte</li>
+<li>Eckige-Klammern für Arrays</li>
+</ul>
+
+<h3 id="datentypen">Datentypen</h3>
+
+<ul>
+<li>String</li>
+<li>Number</li>
+<li>Object</li>
+<li>Array</li>
+<li>Boolean</li>
+<li>null</li>
+</ul>
+
+<h2 id="bson">BSON</h2>
+
+<p><strong>B</strong>inary JSON</p>
+
+<p>Format für Daten-Speicherung und Inter-Prozesskommunikation in MongoDB</p>
+
+<h3 id="datentypen-1">Datentypen</h3>
+
+<ul>
+<li>String</li>
+<li>decimal</li>
+<li>date</li>
+<li>timestamp</li>
+<li>regex</li>
+<li>javascript</li>
+<li>ObjecId</li>
+<li>[&hellip;]</li>
+</ul>
+
+<p><img src="res/mongodb_bsontypes.png" alt="" /></p>
+
+<h2 id="vergleich-bson-vs-json">Vergleich BSON vs. JSON</h2>
+
+<table>
+<thead>
+<tr>
+<th>JSON</th>
+<th>BSON</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>UTF-8 kodiert</td>
+<td>Binär kodiert</td>
+</tr>
+
+<tr>
+<td>String, Boolean, Array, Bumber</td>
+<td>String, Boolean, Array, int, float, &hellip;</td>
+</tr>
+
+<tr>
+<td>Von Menschen lesbar</td>
+<td>Nur von Maschinen lesbar</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="daten-import-export">Daten import/export</h2>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>JSON</th>
+<th>BSON</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>IMPORT</td>
+<td>mongoimport</td>
+<td>mongorestore</td>
+</tr>
+
+<tr>
+<td>EXPORT</td>
+<td>mongoexport</td>
+<td>mongodump</td>
+</tr>
+</tbody>
+</table>
+
+<h1 id="verbindung">Verbindung</h1>
+
+<p>Potokoll: TCP/IP<br />
+Standardport: 27017</p>
+
+<p><img src="res/mongodb_connect.png" alt="" /></p>
+
+<p>Kommunikation erfolgt über Treiber (diese konvertieren Daten in BSON)</p>
+
+<h1 id="speicherorganisation">Speicherorganisation</h1>
+
+<ul>
+<li>MongoDB verwendet die WiredTiger Storage-Engine</li>
+<li>Um möglichst schnellen Zugriff zu ermöglichen werden Daten im RAM (Gigabytes) verwaltet</li>
+<li>Periodisch werden die Daten mit Festplatte (Terrabytes) synchronisiert, standardmäßig:
+
+<ul>
+<li>Alle 60s für Collections und Indexe</li>
+<li>Alle 100ms: Journal</li>
+</ul></li>
+</ul>
+
+<h2 id="concurrency-auf-dokumentenebene">Concurrency auf Dokumentenebene</h2>
+
+<ul>
+<li>Mehrere Clients können verschiedene Dokumente in der gleichen Collection, gleichzeitig bearbeiten</li>
+<li>Pessimistisches Locking (Exklusive Locks) nur für einige best. operationen (z.B. Löschen einer Collection)</li>
+<li>Mehrheitlich Optimistisches Locking mit Retries falls notwendig (<em>Intent locks</em>)
+
+<ul>
+<li>Nach lesen wird Versionsnummer notiert</li>
+<li>Vor Schreiben wird überprüft ob Nummer gleich geblieben ist (kein Update)</li>
+<li>Wenn sich Version geändert hat, wird Transaktion abgebrochen und der Benutzer kann sie neu-starten</li>
+</ul></li>
+</ul>
+
+<h2 id="kompression">Kompression</h2>
+
+<ul>
+<li>Collections und Indexe werden komprimiert
+
+<ul>
+<li>✔ Geringerer Speicherverbrauch</li>
+<li>❌ Mehr CPU Last</li>
+</ul></li>
+</ul>
+
+<h2 id="snapshots">Snapshots</h2>
+
+<ul>
+<li>Jede Operation sieht einen konsistente Snapshot der Datenbank (Daten die sich zu bestimmter Zeit im RAM befinden)</li>
+<li>Änderungen einer Operation sind nicht öffentlich sichtbar bis Operation abgeschlossen wurde</li>
+<li>Bei Schreiben auf die Festplatte werden alle Daten eins Snapshots in konsistenter Weise auf Festplatte persistiert</li>
+</ul>
+
+<h2 id="checkpoints">Checkpoints</h2>
+
+<ul>
+<li>Alle 60 Sekunden erstellt</li>
+<li>Dienen als Point of Recovery</li>
+</ul>
+
+<h2 id="journaling">Journaling</h2>
+
+<ul>
+<li>Folgt dem WAL-Prinzip (Write Ahead Log)</li>
+<li>Im Journal werden alle Änderungen zwischen Checkpoints persistiert</li>
+</ul>
+
+<p><strong>Recovery Prozess</strong>:</p>
+
+<ol>
+<li>Such in Daten-Files nach letztem Checkpoint</li>
+<li>Such im Journal nach letztem dazu passenden Log-Eintrag</li>
+<li>Alle Operationen nach dem Checkpoint die noch nicht geschrieben wurden: Wiederholen</li>
+</ol>
+
+<h1 id="datenbanken">Datenbanken</h1>
+
+<ul>
+<li>Mehrere Datenbanken pro Server</li>
+<li><code>--directoryperdb</code> sorgt für einen Unterordner pro DB (<code>mongod --dbpath --directoryperdb</code>)</li>
+</ul>
+
+<p><strong>Systemdatenbanken</strong></p>
+
+<ul>
+<li>Local (wird nicht repliziert)</li>
+<li>Admin (AuthZ, AuthN)</li>
+<li>Config (Metadaten für Sharding)</li>
+</ul>
+
+<h2 id="operationen">Operationen</h2>
+
+<ul>
+<li>Anzeigen
+
+<ul>
+<li><code>show dbs</code></li>
+</ul></li>
+<li>Implizite Erzeugung/Löschung
+
+<ul>
+<li><code>use</code> statement</li>
+<li>Verzeichnis wird erzeugt, sobald Daten hinzugefügt werden</li>
+<li>z.B. <code>db.newcol.insert({&quot;field1&quot;:1234})</code></li>
+<li>Es gibt keine leeren Datenbanken (autom. gelöscht, sobald letzte Collection gelöscht wird / leer ist)</li>
+</ul></li>
+<li>Explizite Löschung
+
+<ul>
+<li>z.B. <code>db.dropDatabase()</code></li>
+</ul></li>
+</ul>
+
+<h1 id="dokumente">Dokumente</h1>
+
+<ul>
+<li>Ein Dokument stellt einen Datensatz dar</li>
+<li>Atomarer Schreib-Zugriff</li>
+<li>Formal:
+
+<ul>
+<li>Geordnete Menge von Feldern</li>
+<li>Felder: Key-Value-Paare
+
+<ul>
+<li>Keys: Strings</li>
+<li>Values: Simple Datentypen, Arrays, bzw. Dokumente</li>
+</ul></li>
+</ul></li>
+<li>Dokumente dürfen maximal 16MB BSON groß sein</li>
+<li>Änderung von Feldnamen könnte zur Änderung der Reihenfolge führen (außer <code>_id</code>)</li>
+<li>Feld Bennenung:
+
+<ul>
+<li>Kein <code>null</code>, kein <code>.</code>, kein <code>$</code></li>
+<li>Doppelte Namen vermeiden</li>
+<li>Sind Teile des Inhalts eines Dokuments (bei vielen Dokumenten führen lange Namen zu großen Dateien)</li>
+</ul></li>
+</ul>
+
+<h2 id="primärschlüssel">Primärschlüssel</h2>
+
+<ul>
+<li><code>_id</code>-Feld</li>
+<li>Es wird automatisch ein Index erstellt</li>
+<li>Von Applikation gesetzt, oder automatisch generiert</li>
+</ul>
+
+<h3 id="objectid">ObjectId</h3>
+
+<ul>
+<li>Datentyp um Dokumente eindeutig zu identifizieren</li>
+<li>12 byte (GUID)</li>
+</ul>
+
+<h2 id="eingebettete-dokumente">Eingebettete Dokumente</h2>
+
+<ul>
+<li>Erhalten keine <code>_id</code></li>
+<li>Mit <code>.</code> Notation kann darauf zugegriffen werden</li>
+<li>Auf Tiefe 100 limitiert</li>
+</ul>
+
+<h2 id="arrays">Arrays</h2>
+
+<ul>
+<li>Flexible Datentypen (vgl. Python)</li>
+</ul>
+
+<h2 id="referenzen">Referenzen</h2>
+
+<ul>
+<li>Manuell (<code>_id</code> eines anderen Dokuments gespeichert)</li>
+<li>DBRef-Konvention: Tripel
+
+<ul>
+<li>Collection-Name</li>
+<li><code>_id</code></li>
+<li>db des referenzierten Dokuments (optional)</li>
+</ul></li>
+<li>Referentielle Integrität wird nicht sichergestellt</li>
+</ul>
+
+<h1 id="collections">Collections</h1>
+
+<ul>
+<li>Mehrere Dokumente mit ähnlicher Struktur</li>
+<li>Schemalose Ansammlung von Daten (keine Constraints)
+
+<ul>
+<li>Applikationsentwickler muss dennoch über Struktur Bescheid wissen</li>
+<li>Performance- und Skalierungs-Bedenken (vgl. &ldquo;Collection Scan&rdquo;)</li>
+</ul></li>
+<li>Namensraum
+
+<ul>
+<li><code>db_name.collection_name</code></li>
+</ul></li>
+<li>Keine Hierachie innerhalb Collections</li>
+<li>Abfrage beziehen sich immer auf <strong>eine</strong> Collection</li>
+</ul>
+
+<h2 id="speicherung">Speicherung</h2>
+
+<p><em>Storage per Collection</em></p>
+
+<ul>
+<li>Eine Datei für Dokumente</li>
+<li>Eine Datei für Indexe</li>
+</ul>
+
+<h2 id="operationen-1">Operationen</h2>
+
+<ul>
+<li>Anzeigen aller Collections einer Datenbank
+
+<ul>
+<li><code>show collections</code></li>
+</ul></li>
+<li>Implizite Erzeugung
+
+<ul>
+<li><code>db.collection1.insert()</code> auf nicht exisierende Collection</li>
+</ul></li>
+<li>Explizite Erzeugung
+
+<ul>
+<li><code>db.createCollection(&quot;collection1&quot;)</code></li>
+</ul></li>
+<li>Explizite Löschung
+
+<ul>
+<li><code>db.collection1.drop()</code></li>
+</ul></li>
+</ul>
+
+<h2 id="spezielle-collections">Spezielle Collections</h2>
+
+<h3 id="capped-collections">Capped Collections</h3>
+
+<ul>
+<li>Verwenden das FIFO-Prinzip</li>
+<li>Maximale Größe wird während Erzeugung entschieden
+
+<ul>
+<li>Anzahl der Bytes (immer erforderlich)</li>
+<li>Anzahl der Dokumente (zusätzlich)</li>
+</ul></li>
+<li>z.B.<code>db.createCollection(&quot;capping&quot;, {capped: true, size:1024, max: 10})</code></li>
+</ul>
+
+<h3 id="time-series-collection">Time Series Collection</h3>
+
+<ul>
+<li>Speichert Messdaten effizient</li>
+<li>z.B. <code>db.createCollection(&quot;weather&quot;, { timeseries: { timeField: &quot;timestamp&quot; } } )</code></li>
+</ul>
+
+<h1 id="queries">Queries</h1>
+
+<p>Werden als Dokumente formatiert:</p>
+
+<p><code>db.collection.find(criteria, projection)</code></p>
+
+<ul>
+<li>Projections werden genutzt, um die Anzahl der zurückgegebenen Felder zu limiteren
+
+<ul>
+<li>Inkludiert: <code>1</code> (wenn Inkludiert angegeben ist, werden alle anderen Felder (außer <code>_id</code>) exkludiert)</li>
+<li>Exkludiert: <code>0</code></li>
+</ul></li>
+<li><code>_id</code> wird immer mitgeliefert, sofern nicht explizit ausgeschossen</li>
+</ul>
+
+<h2 id="cursor">Cursor</h2>
+
+<ul>
+<li>Query liefert Cursor</li>
+<li>Diesen kann man in Variable speichern/Funktionen darauf aufrufen</li>
+</ul>
+
+<p><strong>Beispiel</strong></p>
+
+<pre><code class="language-javascript">while (cursor.hasNext()) {printjson(cursor.next())}
+</code></pre>
+
+<p>^^ Iteriert über ganzen Cursor</p>
+
+<pre><code class="language-javascript">cursor.limit(3)
+</code></pre>
+
+<p>^^ Liefert maximal 3 Dokumente</p>
+
+<pre><code class="language-javascript">cursor.skip(2)
+</code></pre>
+
+<p>^^ Überspringt die ersten beiden Resultate</p>
+
+<pre><code class="language-javascript">cursor.sort({&quot;user.friends_count&quot;:-1})
+</code></pre>
+
+<p>^^ Sortiert den Cursor absteigend</p>
+
+<pre><code class="language-javascript">cursor.objsLeftInBatch()
+</code></pre>
+
+<p>^^ Liefert die Anzahl der verbleibenden Resultate</p>
+
+<h2 id="sortierung">Sortierung</h2>
+
+<ul>
+<li>Am besten nach indexierten Feldern sortieren (bessere Performance)
+
+<ul>
+<li>1: aufsteigend</li>
+<li>-1: absteigend</li>
+</ul></li>
+</ul>
+
+<p><code>min value &lt; null &lt; numeric &lt; strings ... &lt; max value</code></p>
+
+<h2 id="operatoren">Operatoren</h2>
+
+<h3 id="verknüpfung">Verknüpfung</h3>
+
+<pre><code class="language-javascript">db.tweets.find({&quot;user.screen_name&quot;:&quot;zigaurre&quot;})
+</code></pre>
+
+<p>^^ Exaktes Match</p>
+
+<pre><code class="language-javascript">db.tweets.find({&quot;user.screen_name&quot;:&quot;zigaurre&quot;, &quot;in_reply_to_screen_name&quot;:&quot;mariamadrid&quot;}) 
+db.tweets.find({$and: [{&quot;user.screen_name&quot;:&quot;zigaurre&quot;}, {&quot;in_reply_to_screen_name&quot;:&quot;mariamadrid&quot;}]}) 
+</code></pre>
+
+<p>^^ AND</p>
+
+<pre><code class="language-javascript">db.tweets.find({$or: [{&quot;user.screen_name&quot;:&quot;zigaurre&quot;}, {&quot;in_reply_to_screen_name&quot;:&quot;mariamadrid&quot;}]})
+</code></pre>
+
+<p>^^ OR</p>
+
+<pre><code class="language-javascript">db.tweets.find({$nor: [{&quot;user.screen_name&quot;:&quot;zigaurre&quot;}, {&quot;in_reply_to_screen_name&quot;:&quot;mariamadrid&quot;}]})
+</code></pre>
+
+<p>^^ NOR</p>
+
+<pre><code class="language-javascript">db.tweets.find({&quot;user.screen_name&quot;: {$in:[&quot;AlexKaris&quot;,&quot;XO7Brainiac&quot;]}})
+</code></pre>
+
+<p>^^ IN</p>
+
+<pre><code class="language-javascript">db.tweets.find({&quot;user.screen_name&quot;: {$nin:[&quot;AlexKaris&quot;,&quot;XO7Brainiac&quot;]}}) 
+</code></pre>
+
+<p>^^ NOT IN</p>
+
+<pre><code class="language-javascript">db.tweets.find({&quot;retweeted&quot;:{$not: {$in:[false]}}})
+</code></pre>
+
+<p>^^ NOT</p>
+
+<h3 id="vergleich">Vergleich</h3>
+
+<pre><code class="language-javascript">db.tweets.find({&quot;user.friends_count&quot;:{$gt: 100000}})
+</code></pre>
+
+<p>^^ Größer als</p>
+
+<pre><code class="language-javascript">db.tweets.find({&quot;user.followers_count&quot;:{$lte: 1}})
+</code></pre>
+
+<p>^^ Kleiner gleich</p>
+
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>gt</td>
+<td>Größer als</td>
+</tr>
+
+<tr>
+<td>gte</td>
+<td>Größer gleich</td>
+</tr>
+
+<tr>
+<td>lt</td>
+<td>Kleiner als</td>
+</tr>
+
+<tr>
+<td>lte</td>
+<td>Kleiner gleich</td>
+</tr>
+
+<tr>
+<td>eq</td>
+<td>Gleich</td>
+</tr>
+
+<tr>
+<td>ne</td>
+<td>Ungleich</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="arrays-1">Arrays</h2>
+
+<ul>
+<li><p>Reihenfolge ist nur entscheidend, wenn man nach einem Array als Ganzes sucht</p></li>
+
+<li><p>Subset mit <code>$all</code></p></li>
+
+<li><p>Arrays mit gewisser Größe <code>$size</code></p></li>
+</ul>
+
+<pre><code class="language-javascript">db.arr.insert({a:[1,2]})
+db.arr.insert({a:[2,3,5]})
+</code></pre>
+
+<p>^^ Ausgangszustand</p>
+
+<pre><code class="language-javascript">db.arr.find({a:1}) 
+db.arr.find({a:2}) 
+</code></pre>
+
+<p>^^ Wo Element vorkommt</p>
+
+<pre><code class="language-javascript">db.arr.find({a:{$all: [3,5]}}) 
+</code></pre>
+
+<p>^^ Wo Elemente vorkommen</p>
+
+<pre><code class="language-javascript">db.arr.find({a:[1,2]})
+db.arr.find({a:[2,1]})
+</code></pre>
+
+<p>^^ Wo <strong>exaktes</strong> Array in <strong>exakter</strong> Reihenfolge vorkommt</p>
+
+<pre><code class="language-javascript">db.arr.find({a:{$size:2}})
+</code></pre>
+
+<p>^^ Wo Array Größe 2 besitzt</p>
+
+<h2 id="existenz">Existenz</h2>
+
+<ul>
+<li>Collections sind schemalos: <code>$exists</code> Operator</li>
+</ul>
+
+<pre><code class="language-javascript">db.exists.insert({a:&quot;one&quot;,b:&quot;two&quot;,c:&quot;three&quot;})
+db.exists.insert({a:&quot;one&quot;,c:&quot;three&quot;}) 
+db.exists.insert({b:&quot;two&quot;,c:&quot;three&quot;}) 
+</code></pre>
+
+<p>^^ Ausgangszustand</p>
+
+<pre><code class="language-javascript">db.exists.find({b: {$exists:true}}) 
+</code></pre>
+
+<p>^^ Wo Feld &ldquo;b&rdquo; existiert</p>
+
+<pre><code class="language-javascript">db.exists.find({b: {$not: {$exists:true}}})
+</code></pre>
+
+<p>^^ Wo Feld &ldquo;b&rdquo; nicht existiert</p>
+
+<h2 id="type">Type</h2>
+
+<ul>
+<li>Felder mit dem selben Namen können von unterschiedlichen Typ in unterschiedlichen Dokumenten sein: <code>$type</code> Operator</li>
+</ul>
+
+<pre><code class="language-javascript">db.type.insert({eins:1, zwei:2})
+db.type.insert({eins:&quot;eins&quot;, zwei:false})
+</code></pre>
+
+<p>^^ Ausgangszustand</p>
+
+<pre><code class="language-javascript">db.type.find({eins:{$type: 2}})
+</code></pre>
+
+<p>^^ Wo Feld &ldquo;eins&rdquo; von bestimmten Typ ist (anhand Tabelle)</p>
+
+<h1 id="mutations">Mutations</h1>
+
+<h2 id="insert">Insert</h2>
+
+<p><strong>Funktionen</strong></p>
+
+<ul>
+<li><code>db.collection.insertOne()</code></li>
+<li><code>db.collection.insertMany()</code></li>
+</ul>
+
+<p><strong>Syntax</strong></p>
+
+<pre><code class="language-javascript">db.collection.insertMany(
+	[ &lt;document 1&gt; , &lt;document 2&gt;, [...] ],
+	{
+		writeConcern: &lt;document&gt;,
+		ordered: &lt;boolean&gt;
+	}
+)
+</code></pre>
+
+<p><strong>Charakteristiken</strong></p>
+
+<ul>
+<li>Implizite Collection-Erstellung falls nicht existiert</li>
+<li><code>_id</code> Feld automatisch hinzugefügt, sofern nicht angegeben</li>
+<li>Standardmäßig geordneter insert</li>
+</ul>
+
+<p><strong>Write Concern</strong>
+- Optionaler Parameter
+- Gibt an wie viel Bestätigung verlangt wird (Durability)</p>
+
+<p><strong>Beispiel</strong></p>
+
+<pre><code class="language-javascript">db.crud.insertOne( {&quot;name&quot;:&quot;Hugo&quot;, &quot;city&quot;: &quot;St. Pölten&quot;, &quot;date_of_birth&quot;: ISODate(&quot;2000-12-24&quot;), &quot;last_modified&quot;: Date()}) 
+db.crud.insertMany([ {&quot;name&quot;:&quot;Frank&quot;, &quot;city&quot;: &quot;Vienna&quot;, &quot;date_of_birth&quot;: ISODate(&quot;2001-11-11&quot;), &quot;last_modified&quot;: Date()}, {&quot;name&quot;:&quot;Jack&quot;, &quot;city&quot;: &quot;Linz&quot;, &quot;date_of_birth&quot;: ISODate(&quot;2000-10-26&quot;), &quot;last_modified&quot;: Date()} ], {ordered:false})
+db.crud.insertOne( {&quot;_id&quot;:1, &quot;nickname&quot;:&quot;Max&quot;})
+</code></pre>
+
+<h2 id="delete">Delete</h2>
+
+<p><strong>Funktionen</strong></p>
+
+<ul>
+<li><code>db.collection.deleteOne()</code></li>
+<li><code>db.collection.deleteMany()</code></li>
+</ul>
+
+<p><strong>Syntax</strong></p>
+
+<pre><code class="language-javascript">db.collection.deleteOne(
+	&lt;filter&gt;,
+	{
+		writeConcern: &lt;document&gt;,
+		collation: &lt;document&gt;,
+		hint: &lt;document|string&gt;
+	}
+)
+</code></pre>
+
+<p><strong>Charakteristiken</strong></p>
+
+<ul>
+<li>Capped/Time Series Collection unterstützen diese Befehle nicht</li>
+</ul>
+
+<p><strong>Hint</strong></p>
+
+<ul>
+<li>Damit kann man angeben welcher Index zum Suchen verwendet werden soll</li>
+</ul>
+
+<p><strong>Collation</strong></p>
+
+<ul>
+<li>Damit können Sprach-spezifische Regeln für String-Vergleiche angegeben werden</li>
+</ul>
+
+<p><strong>Beispiel</strong></p>
+
+<pre><code class="language-javascript">db.crud.deleteOne({&quot;city&quot;:&quot;Vienna&quot;})
+db.crud.deleteMany( {&quot;date_of_birth&quot;: {$lt: ISODate(&quot;2002-01-01&quot;)} })
+</code></pre>
+
+<h2 id="update">Update</h2>
+
+<p><strong>Funktionen</strong></p>
+
+<ul>
+<li>db.collection.updateOne()</li>
+<li>db.collection.updateMany()</li>
+<li>db.collection.replaceOne()</li>
+</ul>
+
+<p><strong>Syntax</strong></p>
+
+<pre><code class="language-javascript">db.collection.[updateOne|updateMany](
+	&lt;filter&gt;,
+	&lt;update&gt;,
+	{
+		upsert: &lt;boolean&gt;,
+		writeConcern: &lt;document&gt;,
+		collation: &lt;document&gt;,
+		arrayFilters: [ &lt;filterdocument1&gt;, ... ],
+		hint: &lt;document|string&gt;
+	}
+)
+</code></pre>
+
+<pre><code class="language-javascript">db.collection.replaceOne(
+	&lt;filter&gt;,
+	&lt;replacement&gt;,
+	{
+		upsert: &lt;boolean&gt;,
+		writeConcern: &lt;document&gt;,
+		collation: &lt;document&gt;,
+		hint: &lt;document|string&gt;
+	}
+)
+</code></pre>
+
+<p><strong>Charakteristiken</strong></p>
+
+<ul>
+<li><code>_id</code> Feld kann nicht geupdatet werden</li>
+<li>Umbenennung kann die Reihenfolge der Felder ändern</li>
+<li>Neue Felder können hinzugefügt ändert</li>
+<li>Filter gibt an welche Dokumente gelöscht werden sollen</li>
+<li>Capped/Time Series Collection unterstützen diese Befehle nicht</li>
+</ul>
+
+<h3 id="upsert">Upsert</h3>
+
+<p><strong>Syntax</strong></p>
+
+<pre><code class="language-javascript">db.inventory.updateOne(
+	{item: &quot;monitor&quot;},
+	{$set: {&quot;size.uom&quot;: &quot;cm&quot;, status: &quot;A&quot;},
+	$currentDate:{lastModified:true}
+	},
+	{upsert:true}
+)
+</code></pre>
+
+<p><strong>Charakteristiken</strong></p>
+
+<ul>
+<li>Ein neues Dokument wird eingefügt, wenn das filter-Kriterium kein Resultat liefert</li>
+</ul>
+
+<p><strong>Beispiel</strong></p>
+
+<pre><code class="language-javascript">db.inventory.updateMany({item:&quot;monitor&quot;},{$set:{&quot;new_field&quot;:true}})
+</code></pre>
+
+<p>^^ Setzt &ldquo;new_field&rdquo; auf &ldquo;true&rdquo; oder fügt es hinzu</p>
+
+<pre><code class="language-javascript">db.inventory.updateMany({item:&quot;monitor&quot;},{$unset:{&quot;new_field&quot;:&quot;&quot;}})
+</code></pre>
+
+<p>^^ Entfernt &ldquo;new_field&rdquo;</p>
+
+<pre><code class="language-javascript">db.inventory.updateMany({},{$max:{qty:30}})
+</code></pre>
+
+<p>^^ Setzt alle niedrigen Mengen auf 30</p>
+
+<pre><code class="language-javascript">db.students.updateMany({_id:1}, {$pop:{scores:-1}})
+</code></pre>
+
+<p>^^ Entfernt das erste Element des &ldquo;scores&rdquo;-Array</p>
+
+<h1 id="indizes">Indizes</h1>
+
+<blockquote>
+<p>Indizes sind spezielle Datenstrukturen, die einen kleinen Teil der Gesamtdatenmenge in einer leicht zu durchsuchenden Form speichern.</p>
+</blockquote>
+
+<ul>
+<li>Problem: MongoDB müsste zur Ermittlung der Dokumente die über eine Query gesucht werden, die ganze Collection durchsuchen</li>
+<li>Ziel: Die Anzahl der zu untersuchenden Dokumente reduzieren &ndash;&gt; Index</li>
+<li>MongoDB verwendet einen B-Baum als Index-Struktur
+
+<ul>
+<li>Bestimmte Felder oder Gruppen von Feldern der Dokumente nach Wert geordnet</li>
+<li>Ermöglicht eine effiziente bereichsbasierte Sortierung und Traversierung</li>
+</ul></li>
+<li>Performance:
+
+<ul>
+<li>Schneller: Read</li>
+<li>Langsamer: Create, Update, Delete</li>
+</ul></li>
+</ul>
+
+<p><img src="res/mongodb_index.png" alt="" /></p>
+
+<h2 id="arten-1">Arten</h2>
+
+<h3 id="primärindex">Primärindex</h3>
+
+<ul>
+<li>Wird für das <code>_id</code>-Feld angelegt, um Einmaligkeit sicherzustellen</li>
+<li>Kann nicht gelöscht werden</li>
+</ul>
+
+<h3 id="sekundärindex">Sekundärindex</h3>
+
+<ul>
+<li>Werden von DB-Admin/Dev erstellt</li>
+<li>Max. 63 zusätzliche pro Collection möglich</li>
+<li>Sollten für häufig vorkommende / lang dauernde Queries erstellt werden</li>
+<li>Namen werden generiert (wenn nicht angegeben)</li>
+</ul>
+
+<h2 id="erstellung">Erstellung</h2>
+
+<p><strong>Syntax</strong></p>
+
+<pre><code class="language-javascript">db.collection.createIndex(
+	&lt;key and index type&gt;,
+	&lt;options&gt;
+)
+</code></pre>
+
+<p><strong>Beispiel</strong></p>
+
+<pre><code class="language-javascript">db.tweets.createIndex({&quot;user.friends_count&quot;:-1})
+</code></pre>
+
+<p>^^ &ldquo;friends_count&rdquo; wird absteigend sortiert gespeichert</p>
+
+<p><strong>Parameter</strong></p>
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Typ</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>unique</td>
+<td>Bool</td>
+<td>Falls true: Indiziertes Feld muss einzigartig sein (default: false)</td>
+</tr>
+
+<tr>
+<td>name</td>
+<td>String</td>
+<td>Index-Name von User bestimmt</td>
+</tr>
+
+<tr>
+<td>partialFilterExpression</td>
+<td>Dokument</td>
+<td>Indiziert nur Dokumente, die dem Filter-Ausdruck entsprechen</td>
+</tr>
+
+<tr>
+<td>sparse</td>
+<td>Bool</td>
+<td>Indiziert nur Dokumente, die das indizierte Feld aufweisen</td>
+</tr>
+
+<tr>
+<td>expireAfterSeconds</td>
+<td>Integer</td>
+<td>Dokumente werden automatisch nach einer bestimmten Dauer gelöscht</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="löschung">Löschung</h2>
+
+<p><strong>Syntax</strong></p>
+
+<pre><code class="language-javascript">db.collection.dropIndex(&lt;index&gt;)
+db.collection.dropIndexes(&lt;indexes&gt;)
+</code></pre>
+
+<p><strong>Charakteristiken</strong></p>
+
+<ul>
+<li>Es gibt keine &ldquo;Update&rdquo;-Funktion (Löschen und neu-erstellen)</li>
+</ul>
+
+<p><strong>Beispiel</strong></p>
+
+<pre><code class="language-javascript">db.tweets.dropIndex({&quot;user.friends_count&quot;:-1})
+</code></pre>
+
+<pre><code class="language-javascript">db.tweets.dropIndex(&quot;user.friends_count_-1&quot;)
+</code></pre>
+
+<pre><code class="language-javascript">db.tweets.dropIndexes()
+</code></pre>
+
+<h2 id="typen">Typen</h2>
+
+<h3 id="single-field-index">Single Field Index</h3>
+
+<ul>
+<li>Ein Feld indiziert</li>
+</ul>
+
+<p><strong>Syntax</strong></p>
+
+<pre><code class="language-javascript">db.collection.createIndex( { &lt;field&gt;: &lt;type&gt; } }
+</code></pre>
+
+<p><strong>Beispiel</strong></p>
+
+<pre><code class="language-javascript">db.tweets.createIndex({&quot;user.friends_count&quot;:-1}, {&quot;name&quot;: &quot;singlefield_idx&quot;})
+</code></pre>
+
+<p>^^ Erstellung</p>
+
+<h3 id="compound-index">Compound Index</h3>
+
+<ul>
+<li>Mehrere Felder indiziert</li>
+<li>Reihenfolge der Felder spielt eine Rolle</li>
+</ul>
+
+<p><strong>Syntax</strong></p>
+
+<pre><code class="language-javascript">db.collection.createIndex( { &lt;field1&gt;: &lt;type&gt;, &lt;field2&gt;: &lt;type2&gt;, ... } )
+</code></pre>
+
+<p><strong>Beispiel</strong></p>
+
+<pre><code class="language-javascript">db.tweets.createIndex({&quot;source&quot;:-1, &quot;user.statuses_count&quot;:1})
+</code></pre>
+
+<p>^^ Erstellung</p>
+
+<pre><code class="language-javascript">db.tweets.find({&quot;source&quot;:{$not:{$in:[null]}}})
+</code></pre>
+
+<p>^^ ✔</p>
+
+<pre><code class="language-javascript">db.tweets.find({&quot;user.statuses_count&quot;:{$gt:4000},&quot;source&quot;:{$not:{$in:[null]}}})
+</code></pre>
+
+<p>^^ ✔</p>
+
+<pre><code class="language-javascript">db.tweets.find({&quot;user.statuses_count&quot;:{$gt:4000}})
+</code></pre>
+
+<p>^^ ❌</p>
+
+<pre><code class="language-javascript">db.tweets.find().sort({&quot;source&quot;:-1,&quot;user.statuses_count&quot;:-1})
+</code></pre>
+
+<p>^^ ❌</p>
+
+<pre><code class="language-javascript">db.tweets.find({&quot;user.statuses_count&quot;:{$gt:4000}}.sort({&quot;source&quot;:1})
+</code></pre>
+
+<p>^^ ✔</p>
+
+<h3 id="multikey-index">Multikey Index</h3>
+
+<ul>
+<li>Array-Feld indiziert</li>
+<li>Es können <strong>nicht</strong> mehrere Arrays indiziert werden</li>
+<li>Es wird ein Index-Schlüssel für jedes Array-Element angelegt &ndash;&gt; Daher können mehrere Index-Schlüssel auf dasselbe Dokument verweisen</li>
+</ul>
+
+<p><img src="res/mongodb_multikey.png" alt="" /></p>
+
+<p><strong>Syntax</strong></p>
+
+<ul>
+<li>Ident zum Single Field Index</li>
+<li>Bei Array-Feldern wird automatisch ein Multikey Index erstellt</li>
+</ul>
+
+<h3 id="text-index">Text Index</h3>
+
+<ul>
+<li>Technik um in Collections nach Text in String-Feldern (bzw. String-Array-Feldern) zu suchen</li>
+<li>Sprache spielt eine Rolle</li>
+<li>Abwägung zwischen Performance und Indexgröße</li>
+<li>Suche mittels <code>$text</code> und <code>$search</code> Operator ()</li>
+<li>Kann auch mit anderen Text / bzw. nicht-Text Felder als Compound Index kombiniert werden</li>
+</ul>
+
+<p><strong>Stemming</strong>
+- Zurückführen eines Wortes auf seinen Wortstamm</p>
+
+<p><img src="res/mongodb_stemming.png" alt="" /></p>
+
+<p><strong>Syntax</strong></p>
+
+<pre><code class="language-javascript">db.collection.createIndex( { &lt;field&gt;:&quot;text&quot; }, { default_language:&quot;german&quot; } )
+</code></pre>
+
+<p><strong>Beispiel</strong></p>
+
+<pre><code class="language-javascript">db.tweets.createIndex({&quot;text&quot;:&quot;text&quot;},{default_language:&quot;english&quot;})
+</code></pre>
+
+<p>^^ Erstellung</p>
+
+<pre><code class="language-javascript">db.tweets.find({$text: {$search: &quot;americans&quot;}},{text:1})
+</code></pre>
+
+<p>^^ Suche nach <code>americans</code></p>
+
+<h3 id="ttl-index">TTL Index</h3>
+
+<ul>
+<li>Dokumente werden automatisch nach einer bestimmten Dauer gelöscht</li>
+<li>Kann auf Datums (bzw. Datums-Array) Feldern erzeugt werden</li>
+<li><code>expireAfterSeconds</code> muss gesetzt werden</li>
+</ul>
+
+<p><strong>Syntax</strong></p>
+
+<pre><code class="language-javascript">db.collection.createIndex( { &lt;field&gt;: &lt;type&gt; }, {expireAfterSeconds: xxx } }
+</code></pre>
+
+<p><strong>Beispiel</strong></p>
+
+<pre><code class="language-javascript">db.people.createIndex({&quot;lastModified&quot;:1},{expireAfterSeconds:120})
+</code></pre>
+
+<h3 id="hashed-index">Hashed Index</h3>
+
+<ul>
+<li>Index-Schlüssel werden gehashed gespeichert</li>
+<li>Performancegewinn nur für exakte Übereinstimmungen</li>
+</ul>
+
+<p><strong>Syntax</strong></p>
+
+<pre><code class="language-javascript">db.collection.createIndex( { &lt;field&gt;:&quot;hashed&quot; } )
+</code></pre>
+
+<h1 id="hash-funktionen">Hash Funktionen</h1>
+
+<ul>
+<li>Werden zur Abbildung von Daten beliebiger Größe auf Werte fester Größe verwendet</li>
+<li>Eingangsmenge &gt;&gt; Zielmenge</li>
+<li>Hash-Werte sind oft Skalare</li>
+<li>Ähnliche Schlüssel sollten zu stark verschiedenen Hash-Werten führen</li>
+</ul>
+
+<p><img src="res/mongodb_hash.png" alt="" /></p>
+
+<h2 id="belastungsfaktor-und-kollisionen">Belastungsfaktor und Kollisionen</h2>
+
+<ul>
+<li>Schlüssel die gehashed werden sollen: <code>K</code></li>
+<li>Mögliche Hash-Werte: <code>S</code></li>
+<li>Verwendete Schlüssel <code>K′ ⊆ K</code> (K&rsquo; ist Teilmenge von K)</li>
+<li>Verwendete Hash-Werte: <code>S′ := {h(k) | k ∈ K'}</code></li>
+<li>Belastungsfaktor: <code>β = \frac{|S'|}{|S|}</code></li>
+<li>Kollision: <code>k ≠ k' ∧ h(k) = h(k')</code></li>
+</ul>
+
+<p><img src="res/mongodb_coll.png" alt="" /></p>
+
+            </div>
+        </article>
+
+        
+
+        <div class="post-info">
+            
+            
+			
+    <p>
+        <span>Fach: DBI</span>
+    </p>
+
+  		</div>
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="/bundle.min.4bd4ccd2ab9fe5338bb5c7d92a81317fa54c948bb5605e9807c4e9b6f7ad4186c70f7634b323e7b854c4a2c4af7d9ebd1fc5a6f42b37d2721a735d8b1d7cbf01.js" integrity="sha512-S9TM0quf5TOLtcfZKoExf6VMlIu1YF6YB8TptvetQYbHD3Y0syPnuFTEosSvfZ69H8Wm9Cs30nIac12LHXy/AQ=="></script>
+
+
+
+    </body>
+</html>

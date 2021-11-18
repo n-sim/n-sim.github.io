@@ -52,6 +52,28 @@ Learn more</description>
     </item>
     
     <item>
+      <title>MongoDB Zusammenfassung</title>
+      <link>https://n-sim.github.io/wiki/dbi/5klasse/mongodb_zusammenfassung/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://n-sim.github.io/wiki/dbi/5klasse/mongodb_zusammenfassung/</guid>
+      <description>Big Data Große Data-Sätze mit denen gewöhnliche Software-Tools nicht umgehen können
+Begriffe Volume (Umfang)
+Menge der erzeugten und gespeicherten Daten
+Variety (Vielfalt)
+Heterogene Daten von strukturiert bis unstrukturierten
+Velocity (Geschwindigkeit)
+Daten wachsen ständig und müssen kontinuierlich analysiert/überwacht werden
+Veracity (Wahrhaftigkeit)
+Qualität und Zuverlässigkeit der Daten
+Value (Wert)
+Wert/Nutzen den Unternehmen aus Daten gewinnen
+Variability (Veränderlichkeit)
+Daten sind weniger konsistent als herkömmliche Transaktionsdaten
+Ziele  Kosteneffiziente / Elastische Skalierung Neue Einblicke (BI) Lösung: NoSQL  NoSQL Datenbanken Not only SQL</description>
+    </item>
+    
+    <item>
       <title>Numpy</title>
       <link>https://n-sim.github.io/wiki/pos/5klasse/numpy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
