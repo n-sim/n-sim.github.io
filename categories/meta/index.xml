@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Meta on Noah</title>
-    <link>https://n-sim.github.io/categories/meta/</link>
+    <link>https://noahsimader.tech/categories/meta/</link>
     <description>Recent content in Meta on Noah</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 31 Aug 2021 21:51:52 +0200</lastBuildDate>
     
-	<atom:link href="https://n-sim.github.io/categories/meta/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://noahsimader.tech/categories/meta/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About this website</title>
-      <link>https://n-sim.github.io/blog/about-this-website/</link>
+      <link>https://noahsimader.tech/blog/about-this-website/</link>
       <pubDate>Tue, 31 Aug 2021 21:51:52 +0200</pubDate>
       
-      <guid>https://n-sim.github.io/blog/about-this-website/</guid>
+      <guid>https://noahsimader.tech/blog/about-this-website/</guid>
       <description>This website was built using Hugo, Markdown and Github Pages.</description>
     </item>
     

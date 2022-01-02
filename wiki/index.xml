@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Wikis on Noah</title>
-    <link>https://n-sim.github.io/wiki/</link>
+    <link>https://noahsimader.tech/wiki/</link>
     <description>Recent content in Wikis on Noah</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 31 Aug 2021 22:42:04 +0200</lastBuildDate>
     
-	<atom:link href="https://n-sim.github.io/wiki/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://noahsimader.tech/wiki/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Kombinatorik Übersicht</title>
-      <link>https://n-sim.github.io/wiki/mathe/5klasse/kombinatorik_%C3%BCbersicht/</link>
+      <link>https://noahsimader.tech/wiki/mathe/5klasse/kombinatorik_%C3%BCbersicht/</link>
       <pubDate>Tue, 31 Aug 2021 22:42:04 +0200</pubDate>
       
-      <guid>https://n-sim.github.io/wiki/mathe/5klasse/kombinatorik_%C3%BCbersicht/</guid>
+      <guid>https://noahsimader.tech/wiki/mathe/5klasse/kombinatorik_%C3%BCbersicht/</guid>
       <description></description>
     </item>
     
     <item>
       <title>MongoDB Zusammenfassung</title>
-      <link>https://n-sim.github.io/wiki/dbi/5klasse/mongodb_zusammenfassung/</link>
+      <link>https://noahsimader.tech/wiki/dbi/5klasse/mongodb_zusammenfassung/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://n-sim.github.io/wiki/dbi/5klasse/mongodb_zusammenfassung/</guid>
+      <guid>https://noahsimader.tech/wiki/dbi/5klasse/mongodb_zusammenfassung/</guid>
       <description>Big Data Große Data-Sätze mit denen gewöhnliche Software-Tools nicht umgehen können
 Begriffe Volume (Umfang)
 Menge der erzeugten und gespeicherten Daten
@@ -43,10 +43,10 @@ Ziele  Kosteneffiziente / Elastische Skalierung Neue Einblicke (BI) Lösung: NoS
     
     <item>
       <title>Numpy</title>
-      <link>https://n-sim.github.io/wiki/pos/5klasse/numpy/</link>
+      <link>https://noahsimader.tech/wiki/pos/5klasse/numpy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://n-sim.github.io/wiki/pos/5klasse/numpy/</guid>
+      <guid>https://noahsimader.tech/wiki/pos/5klasse/numpy/</guid>
       <description> Arrays Erzeugen array
 array = np.array([42, 3.1415])  arange
 array = np.arange(0, 24, 2)  Zahlen von 0 bis exkl. 24 in 2er-Schritten
@@ -57,10 +57,10 @@ Löschen np.delete(a, 1, 0)  </description>
     
     <item>
       <title>Pandas</title>
-      <link>https://n-sim.github.io/wiki/pos/5klasse/pandas/</link>
+      <link>https://noahsimader.tech/wiki/pos/5klasse/pandas/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://n-sim.github.io/wiki/pos/5klasse/pandas/</guid>
+      <guid>https://noahsimader.tech/wiki/pos/5klasse/pandas/</guid>
       <description>Input/Output Voreinstellungen
 pd.set_option(&#39;display.max_columns&#39;, 100) pd.set_option(&#39;display.max_rows&#39;, 50)  Manuell erstellen
 df = pd.DataFrame(data={&amp;quot;age&amp;quot;: [18, 23, 24], &amp;quot;grade&amp;quot;: [1, 2, 2]}, index=[&amp;quot;Noah&amp;quot;, &amp;quot;Wolfgang&amp;quot;, &amp;quot;Sebi&amp;quot;])  CSV einlesen
@@ -74,10 +74,10 @@ df.loc[:3, ::2]  ^^ Selektiert von den ersten 3 Zeilen (Ende inklusive), jeweils
     
     <item>
       <title>Seaborn</title>
-      <link>https://n-sim.github.io/wiki/pos/5klasse/seaborn/</link>
+      <link>https://noahsimader.tech/wiki/pos/5klasse/seaborn/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://n-sim.github.io/wiki/pos/5klasse/seaborn/</guid>
+      <guid>https://noahsimader.tech/wiki/pos/5klasse/seaborn/</guid>
       <description>Allgemeines  hue: Gibt an, welches Featues zur Einfärbung genutzt werden soll (nur kategorische Daten sinnvoll) kind: Gibt speziellen Typ des Plots an  Histplot Normal
 sns.histplot(data=df, x=&amp;quot;Age&amp;quot;, hue=&amp;quot;Pclass&amp;quot;, multiple=&amp;quot;stack&amp;quot;)  Nach Feature-Ausprägung getrennt
 sns.displot(data=df, x=&amp;quot;Age&amp;quot;, col=&amp;quot;Pclass&amp;quot;)  Countplot sns.countplot(data=df, x=&amp;quot;Survived&amp;quot;)  sns.countplot(data=df, x=&amp;quot;Survived&amp;quot;, hue=&amp;quot;Sex&amp;quot;)  ^^ Survived aufgeteilt nach Geschlecht
